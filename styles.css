@@ -133,6 +133,7 @@ nav {
     min-height: 100vh; /* Ensure it takes up full viewport height */
     margin: 0; /* No margin */
     padding: 80px 0 0 0; /* Add top padding to move the content down */
+    position: relative; /* Added to allow absolute positioning of children */
 }
 
 #About h1{
@@ -141,6 +142,15 @@ nav {
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
 }
+
+#About h2 {
+    font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
+    color: white;
+    text-align: right;
+    margin-right: 615px; /* Reduce this value to move left */
+    margin-top: 100px;
+}
+
 
 #About p{
     border: 2px solid D3D3D3; /* Red border around the paragraph */
@@ -153,8 +163,9 @@ nav {
     max-width: 500px; /* Set a max width for the box */
     text-align: left; /* Align text to the left */
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    margin-top: 50px;
     margin-left: 250px;
+    position: relative; /* Keep position */
+    z-index: 2; /* Make sure it's above other elements */
 }
 
 .Me{
@@ -164,4 +175,45 @@ nav {
     object-fit: cover;
     margin-left: 300px;
     border-radius: 50px;
+    margin-top: -50px;
+    position: relative; /* Keep position */
+    z-index: 2; /* Make sure it's above other elements */
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    text-align: center;
+}
+
+.image-item img {
+    width: 125px; /* Standard width */
+    height: auto; /* Maintain aspect ratio */
+    border: 5px solid #071630; /* Red border */
+    padding: 15px; /* Space inside the border */
+    border-radius: 10px; /* Optional: Slightly rounded corners */
+    box-sizing: border-box; /* Ensures padding doesn't increase size */
+    margin-bottom: 8px; /* Space between image and caption */
+}
+
+.image-caption {
+    color: white;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+    margin-left: auto;
+    padding-right: 50px;
+    position: absolute;
+    right: 0;
+    top: 300px;
+    z-index: 1;
 }

@@ -17,9 +17,11 @@ html {
 nav {
     background-color: #27272a;
     display: flex;
-    position: sticky;
+    position: fixed; /* Change from sticky to fixed */
     top: 0;
-    z-index: 10;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Increase z-index to ensure it stays on top */
 }
 
 /* Default for larger screens (PCs) */
@@ -43,28 +45,10 @@ nav {
     background-color: #D3D3D3;
 }
 
-@media (max-width: 1200px) {
+/* For screens between 1664px and 2640px (Mac and larger monitors) */
+@media (min-width: 1080px) and (max-width: 1664px) {
     .portfolio-section {
-        width: 50%; /* Adjust for slightly smaller screens like larger laptops */
-    }
-}
-
-@media (max-width: 992px) {
-    .portfolio-section {
-        width: 60%; /* Adjust for medium-sized screens like MacBook Air */
-    }
-}
-
-/* For small screens like mobile devices */
-@media (max-width: 768px) {
-    .portfolio-section {
-        width: 70%; /* Slightly larger on tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    .portfolio-section {
-        width: 90%; /* Adjust for small screens, but not too large */
+        width: 33%; /* Adjust for screens like your Mac */
     }
 }
 
@@ -109,7 +93,7 @@ nav {
     flex-direction: column;
     margin: 0; /* Ensure no margins on the section */
     padding: 0; /* No padding */
-    margin-top: -150px;
+    margin-top: -50px;
 }
 
 #Home h1, #Home h2 {
@@ -178,6 +162,11 @@ nav {
     margin-top: 100px;
 }
 
+@media (min-width: 1080px) and (max-width: 1664px) {
+    #About h2{
+        margin-right: 400px; /* Adjust for screens like your Mac */
+    }
+}
 
 #About p{
     border: 2px solid D3D3D3; /* Red border around the paragraph */
@@ -195,6 +184,12 @@ nav {
     z-index: 2; /* Make sure it's above other elements */
 }
 
+@media (min-width: 1080px) and (max-width: 1664px) {
+    #About p{
+        margin-left: 150px; /* Adjust for screens like your Mac */
+    }
+}
+
 .Me{
     width: 400px;
     height: 300px;
@@ -205,6 +200,12 @@ nav {
     margin-top: -50px;
     position: relative; /* Keep position */
     z-index: 2; /* Make sure it's above other elements */
+}
+
+@media (min-width: 1080px) and (max-width: 1664px) {
+    .Me {
+        margin-left: 200px; /* Adjust for screens like your Mac */
+    }
 }
 
 .image-item {
@@ -243,4 +244,19 @@ nav {
     right: 0;
     top: 300px;
     z-index: 1;
+}
+
+#Projects{
+    background-color: #27272a; /* Same background as Home */
+    min-height: 100vh; /* Ensure it takes up full viewport height */
+    margin: 0; /* No margin */
+    padding: 80px 0 0 0; /* Add top padding to move the content down */
+    position: relative; /* Added to allow absolute positioning of children */
+}
+
+#Projects h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
+    color: white;
 }

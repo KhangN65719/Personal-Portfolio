@@ -43,32 +43,40 @@ nav {
     background-color: #D3D3D3;
 }
 
-@media (max-width: 1200px) {
+/* For screens between 1664px and 2640px (Mac and larger monitors) */
+@media (min-width: 1921px) and (max-width: 2640px) {
     .portfolio-section {
-        width: 50%; /* Adjust for slightly smaller screens like larger laptops */
+        width: 33%; /* Adjust for screens like your Mac */
     }
 }
 
+/* For screens larger than 2640px (Ultra-wide screens) */
+@media (min-width: 2640px) {
+    .portfolio-section {
+        width: 25%; /* Adjust for very large screens */
+    }
+}
+
+/* For medium screens like laptops (between 992px and 1664px) */
 @media (max-width: 992px) {
     .portfolio-section {
         width: 60%; /* Adjust for medium-sized screens like MacBook Air */
     }
 }
 
-/* For small screens like mobile devices */
+/* For smaller screens like tablets */
 @media (max-width: 768px) {
     .portfolio-section {
         width: 70%; /* Slightly larger on tablets */
     }
 }
 
+/* For small screens like mobile devices */
 @media (max-width: 480px) {
     .portfolio-section {
         width: 90%; /* Adjust for small screens, but not too large */
     }
 }
-
-
 
 .portfolio-section li {
     margin-right: 60px;

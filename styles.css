@@ -44,7 +44,7 @@ nav {
 }
 
 /* For screens between 1664px and 2640px (Mac and larger monitors) */
-@media (min-width: 1921px) and (max-width: 2640px) {
+@media (min-width: 1080px) and (max-width: 1664px) {
     .portfolio-section {
         width: 33%; /* Adjust for screens like your Mac */
     }

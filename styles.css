@@ -13,36 +13,54 @@ nav{
     display: flex;
 }
 
-.portfolio-section{
+.portfolio-section {
     color: grey;
     list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: 0;
+    width: 25%; /* Adjust the width of the border */
+    margin: 0 auto; /* Center the portfolio-section horizontally */
     padding: 0;
-    margin-top: 40px;
-    margin-left: 70px;
+    margin-top: 20px;
     font-size: 18px;
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; /* Changed font */
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    border: 2px solid #D3D3D3; /* Border around the list */
+    border-radius: 100px; /* Optional: rounded corners */
+    padding: 10px; /* Padding inside the border */
+    box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+    background-color: #D3D3D3;
 }
 
-.portfolio-section li a{
-    margin-right: 70px;
+.portfolio-section li {
+    margin-right: 60px; /* Adjust this to control space between list items */
+}
+
+.portfolio-section li:hover{
+    color: #0D0D0D;
+}
+
+.portfolio-section li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+}
+
+.portfolio-section li a {
     text-decoration: none;
     color: inherit;
 }
+
 
 #Home {
     background-color: #0D0D0D; /* Dark background */
     text-align: center;
     color: white;
-    height: 95vh;
+    height: 110vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: -150px;
+
 }
 
 #Home h1, #Home h2 {

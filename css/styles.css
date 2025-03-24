@@ -252,6 +252,7 @@ nav {
     margin: 0; /* No margin */
     padding: 80px 0 0 0; /* Add top padding to move the content down */
     position: relative; /* Added to allow absolute positioning of children */
+    margin-top: -25px;
 }
 
 #Projects h1{

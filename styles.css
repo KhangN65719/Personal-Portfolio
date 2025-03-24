@@ -160,6 +160,11 @@ nav {
     margin-top: 100px;
 }
 
+@media (min-width: 1080px) and (max-width: 1664px) {
+    #About h2{
+        margin-right: 400px; /* Adjust for screens like your Mac */
+    }
+}
 
 #About p{
     border: 2px solid D3D3D3; /* Red border around the paragraph */

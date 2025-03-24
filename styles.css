@@ -9,8 +9,10 @@ html {
 }
 
 nav{
-    background-color: #0D0D0D;
+    background-color: #27272a;
     display: flex;
+    position: sticky;
+    top: 0;
 }
 
 .portfolio-section {
@@ -33,25 +35,38 @@ nav{
 }
 
 .portfolio-section li {
-    margin-right: 60px; /* Adjust this to control space between list items */
+    margin-right: 60px;
+    position: relative; /* To position the pseudo-element correctly */
 }
 
-.portfolio-section li:hover{
-    color: #0D0D0D;
+.portfolio-section li::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white; /* Color of the moving border */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.portfolio-section li:hover::after {
+    width: 100%; /* When hovered, the border expands */
+    left: 0; /* Make sure it's aligned correctly */
 }
 
 .portfolio-section li:last-child {
-    margin-right: 0; /* Remove margin from the last list item */
+    margin-right: 0;
 }
 
 .portfolio-section li a {
     text-decoration: none;
-    color: inherit;
+    color: #3b3b3b;
 }
 
 
 #Home {
-    background-color: #0D0D0D; /* Dark background */
+    background-color: #27272a; /* Dark background */
     text-align: center;
     color: white;
     height: 110vh;
@@ -85,7 +100,7 @@ nav{
     font-weight: 400; /* Slightly bolder for the highlight */
 }
 
-.cta-button {
+.Resume {
     background-color: transparent;
     color: #ff3b4a; /* Same red as your highlighted name */
     border: 2px solid #ff3b4a;
@@ -102,6 +117,6 @@ nav{
     margin-top: 20px;
 }
 
-.cta-button:hover {
+.Resume:hover {
     background-color: rgba(255, 59, 74, 0.1);
 }

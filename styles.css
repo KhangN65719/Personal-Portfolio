@@ -1,0 +1,89 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+nav{
+    background-color: #0D0D0D;
+    display: flex;
+}
+
+.portfolio-section{
+    color: grey;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    margin-left: 70px;
+    font-size: 18px;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; /* Changed font */
+}
+
+.portfolio-section li a{
+    margin-right: 70px;
+    text-decoration: none;
+    color: inherit;
+}
+
+#Home {
+    background-color: #0D0D0D; /* Dark background */
+    text-align: center;
+    color: white;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#Home h1, #Home h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif; /* Changed font */
+    font-weight: 300; /* Lighter weight for that modern look */
+    letter-spacing: 1px; /* Add slight letter spacing */
+}
+
+#Home h1 {
+    margin-bottom: 10px;
+}
+
+#Home h2 {
+    margin-bottom: 10px;
+}
+
+#Home .highlight {
+    color: #ff3b4a; /* Slightly adjusted red to match the image better */
+    font-weight: 400; /* Slightly bolder for the highlight */
+}
+
+.cta-button {
+    background-color: transparent;
+    color: #ff3b4a; /* Same red as your highlighted name */
+    border: 2px solid #ff3b4a;
+    padding: 8px 40px;
+    font-size: 18px;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: rgba(255, 59, 74, 0.1);
+}

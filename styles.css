@@ -29,7 +29,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%; /* Adjusted for better fit on PCs */
+    width: 33%; /* Adjusted for better fit on PCs */
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;

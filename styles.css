@@ -200,9 +200,15 @@ nav {
     max-width: 500px; /* Set a max width for the box */
     text-align: left; /* Align text to the left */
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    margin-left: 200px;
+    margin-left: 250px;
     position: relative; /* Keep position */
     z-index: 2; /* Make sure it's above other elements */
+}
+
+@media (min-width: 1080px) and (max-width: 1664px) {
+    #About p{
+        margin-left: 200px; /* Adjust for screens like your Mac */
+    }
 }
 
 .Me{
@@ -210,11 +216,17 @@ nav {
     height: 300px;
     border: 2px;
     object-fit: cover;
-    margin-left: 250px;
+    margin-left: 300px;
     border-radius: 50px;
     margin-top: -50px;
     position: relative; /* Keep position */
     z-index: 2; /* Make sure it's above other elements */
+}
+
+@media (min-width: 1080px) and (max-width: 1664px) {
+    .me {
+        margin-left: 250px; /* Adjust for screens like your Mac */
+    }
 }
 
 .image-item {

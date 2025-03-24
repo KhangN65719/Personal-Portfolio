@@ -207,7 +207,7 @@ nav {
 
 @media (min-width: 1080px) and (max-width: 1664px) {
     #About p{
-        margin-left: 200px; /* Adjust for screens like your Mac */
+        margin-left: 150px; /* Adjust for screens like your Mac */
     }
 }
 
@@ -224,8 +224,8 @@ nav {
 }
 
 @media (min-width: 1080px) and (max-width: 1664px) {
-    .me {
-        margin-left: 250px; /* Adjust for screens like your Mac */
+    .Me {
+        margin-left: 200px; /* Adjust for screens like your Mac */
     }
 }
 

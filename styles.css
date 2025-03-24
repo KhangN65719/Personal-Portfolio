@@ -17,9 +17,11 @@ html {
 nav {
     background-color: #27272a;
     display: flex;
-    position: sticky;
+    position: fixed; /* Change from sticky to fixed */
     top: 0;
-    z-index: 10;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Increase z-index to ensure it stays on top */
 }
 
 /* Default for larger screens (PCs) */
@@ -91,7 +93,7 @@ nav {
     flex-direction: column;
     margin: 0; /* Ensure no margins on the section */
     padding: 0; /* No padding */
-    margin-top: -150px;
+    margin-top: -50px;
 }
 
 #Home h1, #Home h2 {
@@ -242,4 +244,19 @@ nav {
     right: 0;
     top: 300px;
     z-index: 1;
+}
+
+#Projects{
+    background-color: #27272a; /* Same background as Home */
+    min-height: 100vh; /* Ensure it takes up full viewport height */
+    margin: 0; /* No margin */
+    padding: 80px 0 0 0; /* Add top padding to move the content down */
+    position: relative; /* Added to allow absolute positioning of children */
+}
+
+#Projects h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
+    color: white;
 }

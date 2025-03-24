@@ -29,7 +29,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 33%; /* Adjusted for better fit on PCs */
+    width: 25%; /* Adjusted for better fit on PCs */
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
@@ -43,26 +43,30 @@ nav {
     background-color: #D3D3D3;
 }
 
-@media (max-width: 1920) {
+@media (max-width: 1200px) {
     .portfolio-section {
-        width: 60%; /* Adjusted for MacBook Air */
+        width: 50%; /* Adjust for slightly smaller screens like larger laptops */
     }
 }
 
-/* For medium screens like tablets */
+@media (max-width: 992px) {
+    .portfolio-section {
+        width: 60%; /* Adjust for medium-sized screens like MacBook Air */
+    }
+}
+
+/* For small screens like mobile devices */
 @media (max-width: 768px) {
     .portfolio-section {
         width: 70%; /* Slightly larger on tablets */
     }
 }
 
-/* For small screens like mobile devices */
 @media (max-width: 480px) {
     .portfolio-section {
         width: 90%; /* Adjust for small screens, but not too large */
     }
 }
-
 
 .portfolio-section li {
     margin-right: 60px;

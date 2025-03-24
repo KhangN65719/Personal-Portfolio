@@ -50,34 +50,6 @@ nav {
     }
 }
 
-/* For screens larger than 2640px (Ultra-wide screens) */
-@media (min-width: 2640px) {
-    .portfolio-section {
-        width: 25%; /* Adjust for very large screens */
-    }
-}
-
-/* For medium screens like laptops (between 992px and 1664px) */
-@media (max-width: 992px) {
-    .portfolio-section {
-        width: 60%; /* Adjust for medium-sized screens like MacBook Air */
-    }
-}
-
-/* For smaller screens like tablets */
-@media (max-width: 768px) {
-    .portfolio-section {
-        width: 70%; /* Slightly larger on tablets */
-    }
-}
-
-/* For small screens like mobile devices */
-@media (max-width: 480px) {
-    .portfolio-section {
-        width: 90%; /* Adjust for small screens, but not too large */
-    }
-}
-
 .portfolio-section li {
     margin-right: 60px;
     position: relative; /* To position the pseudo-element correctly */

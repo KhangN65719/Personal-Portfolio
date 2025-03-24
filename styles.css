@@ -43,9 +43,9 @@ nav {
     background-color: #D3D3D3;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 2560px) {
     .portfolio-section {
-        width: 50%; /* Adjust for slightly smaller screens like larger laptops */
+        width: 33%; /* Adjust for slightly smaller screens like larger laptops */
     }
 }
 
@@ -67,8 +67,6 @@ nav {
         width: 90%; /* Adjust for small screens, but not too large */
     }
 }
-
-
 
 .portfolio-section li {
     margin-right: 60px;

@@ -43,7 +43,7 @@ nav {
     background-color: #D3D3D3;
 }
 
-@media (max-width: 2560px) {
+@media (max-width: 1920) {
     .portfolio-section {
         width: 60%; /* Adjusted for MacBook Air */
     }

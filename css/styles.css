@@ -204,7 +204,8 @@ nav {
 
 @media (min-width: 1080px) and (max-width: 1664px) {
     .Me {
-        margin-left: 200px; /* Adjust for screens like your Mac */
+        margin-left: 200px;
+        margin-top: -100px; /* Adjust for screens like your Mac */
     }
 }
 

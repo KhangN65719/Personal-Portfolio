@@ -128,3 +128,27 @@ document.addEventListener('DOMContentLoaded', function() {
         errorMessage.style.display = 'none';
     }
 });
+
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    const emailInput = document.getElementById('email');
+    const email = emailInput.value.trim();
+    const successMsg = document.getElementById('success-message');
+    const errorMsg = document.getElementById('error-message');
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        event.preventDefault(); // Stop form from submitting
+        errorMsg.style.display = 'block';
+        errorMsg.textContent = 'Please enter a valid email address.';
+        successMsg.style.display = 'none';
+        emailInput.style.border = '2px solid red';
+    } else {
+        errorMsg.style.display = 'none';
+        successMsg.style.display = 'block';
+        emailInput.style.border = '2px solid green';
+
+        // If you're using EmailJS or sending data via AJAX, you'd handle it here
+        // Otherwise the form just submits
+    }
+});

@@ -155,10 +155,11 @@ nav {
 #About h2 {
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    text-align: left;
+    text-align: right;
     width: 80%;
     max-width: 1200px;
-    margin-left: 1000px; /* adjust this value to shift as much/little as needed */
+    margin: 10px auto;
+    margin-right: 625px;
 }
 
 /* Container for about content */
@@ -467,4 +468,3 @@ footer {
         text-align: center;
     }
 }
-

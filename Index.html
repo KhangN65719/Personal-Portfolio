@@ -71,11 +71,38 @@
     </section>  
     
     <!-- Contact section --> 
-    <section id="Contact">     
-        <header>         
-            <h1>Contact</h1>     
-        </header> 
-    </section>  
-    <script src="js/scroll.js"></script>
-</body> 
+<section id="Contact">     
+    <header>         
+        <h1>Contact</h1>
+        <p>Have a question or want to work together? <br>
+        Leave your details and I'll get back to you as soon as possible.</p>
+        <!-- No action attribute on the form -->
+        <form id="contact-form">
+            <!-- Name input box -->
+            <input type="text" id="name" name="name" placeholder="Name" required>
+        
+            <!-- Email input box -->
+            <input type="email" id="email" name="email" placeholder="Email" required>
+        
+            <!-- Message input box -->
+            <textarea id="message" name="message" placeholder="Message" required></textarea>
+        
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </form>
+        
+        <!-- Add these success/error message elements (optional but recommended) -->
+        <div id="success-message" style="display: none; color: green; margin-top: 20px; text-align: center;">
+            Your message has been sent successfully!
+        </div>
+        <div id="error-message" style="display: none; color: red; margin-top: 20px; text-align: center;">
+            Failed to send the message. Please try again later.
+        </div>
+    </header> 
+</section>
+
+<!-- Right before the closing </body> tag, add these script references -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="js/contact.js"></script>
+</body>
 </html>

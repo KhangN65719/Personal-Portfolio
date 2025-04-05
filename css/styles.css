@@ -278,3 +278,59 @@ nav {
     color: white;
     margin-top: 0px;
 }
+
+#Contact p{
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 20px;
+    color: white;
+}
+
+#Contact form{
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+}
+
+#Contact form input,
+#Contact form textarea {
+    display: block; /* Ensures that each element takes up its own line */
+    width: 10000px;
+    max-width: 600px;
+    margin: 10px auto; /* Centers the elements and adds space between them */
+    padding: 10px;
+    resize: none;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    border-radius: 5px; /* Optional for rounded corners */
+    background-color: #363737;
+    border: 2px solid #363737; /* Change this to your desired border color */
+    color: white;
+}
+
+#Contact form textarea{
+    height: 150px;
+}
+
+#Contact form button {
+    background-color: #ff3b4a; /* Darker shade of green when hovering */
+    color: #363737;
+    padding: 10px 20px; /* Padding inside the button (top/bottom, left/right) */
+    font-size: 16px; /* Font size */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.50s ease; /* Smooth transition for background color change */
+    margin-left: 510px;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#Contact form button:hover {
+    background-color: #363737; /* Button background color (green) */
+    color: white; /* Text color */
+}
+
+#Contact form button:focus {
+    outline: none; /* Removes the default outline */
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Adds a subtle blue glow on focus */
+}
+

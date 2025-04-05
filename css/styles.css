@@ -178,6 +178,16 @@ nav {
     padding-right: 20px;
 }
 
+.Me {
+    width: 300px;
+    height: 225px;
+    border: 2px;
+    object-fit: cover;
+    border-radius: 40px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
 #About p {
     border: 2px solid #D3D3D3;
     padding: 20px;
@@ -189,15 +199,6 @@ nav {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     font-size: 15px;
     margin-bottom: 20px;
-}
-
-.Me {
-    width: 300px;
-    height: 225px;
-    border: 2px;
-    object-fit: cover;
-    border-radius: 40px;
-    align-self: center;
 }
 
 /* Right side with skills icons */

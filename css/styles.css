@@ -82,18 +82,22 @@ nav {
     color: #3b3b3b;
 }
 
+/* Add scroll-padding-top to ensure anchors land properly below fixed nav */
+html {
+    scroll-padding-top: 80px; /* Adjust this value based on your nav height */
+}
+
 #Home {
     background-color: #27272a; /* Dark background */
     text-align: center;
     color: white;
-    min-height: 100vh; /* Ensure full viewport height */
+    height: 100vh; /* Use exact height instead of min-height */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0; /* Ensure no margins on the section */
     padding: 0; /* No padding */
-    margin-top: -50px;
 }
 
 #Home h1, #Home h2 {
@@ -141,9 +145,9 @@ nav {
 
 #About {
     background-color: #27272a; /* Same background as Home */
-    min-height: 100vh; /* Ensure it takes up full viewport height */
+    min-height: 100vh; /* Use full height */
     margin: 0; /* No margin */
-    padding: 80px 0 0 0; /* Add top padding to move the content down */
+    padding: 80px 0 40px 0; /* Increased padding */
     position: relative; /* Added to allow absolute positioning of children */
 }
 
@@ -152,6 +156,7 @@ nav {
     font-size: 60px;
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
+    padding-top: 40px; /* Add padding to push content down */
 }
 
 #About h2 {
@@ -159,7 +164,7 @@ nav {
     color: white;
     text-align: right;
     margin-right: 615px; /* Reduce this value to move left */
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 @media (min-width: 1080px) and (max-width: 1664px) {
@@ -204,7 +209,8 @@ nav {
 
 @media (min-width: 1080px) and (max-width: 1664px) {
     .Me {
-        margin-left: 200px; /* Adjust for screens like your Mac */
+        margin-left: 200px;
+        margin-top: -100px; /* Adjust for screens like your Mac */
     }
 }
 
@@ -248,9 +254,9 @@ nav {
 
 #Projects{
     background-color: #27272a; /* Same background as Home */
-    min-height: 100vh; /* Ensure it takes up full viewport height */
+    min-height: 100vh; /* Use full height */
     margin: 0; /* No margin */
-    padding: 80px 0 0 0; /* Add top padding to move the content down */
+    padding: 80px 0 40px 0; /* Increased padding */
     position: relative; /* Added to allow absolute positioning of children */
 }
 
@@ -259,4 +265,160 @@ nav {
     font-size: 60px;
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
+    padding-top: 40px; /* Add padding to push content down */
+}
+
+#Contact{
+    background-color: #27272a; /* Same background as Home */
+    min-height: 80vh; /* Slightly shorter height */
+    margin: 0; /* No margin */
+    padding: 80px 0 40px 0; /* Increased padding */
+    position: relative; /* Added to allow absolute positioning of children */
+}
+
+#Contact h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
+    color: white;
+    padding-top: 40px; /* Add padding to push content down */
+}
+
+#Contact p{
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+    margin-top: 40px; /* Reduced from 100px */
+    font-size: 20px;
+    color: white;
+}
+
+#Contact form{
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+}
+
+#Contact form input,
+#Contact form textarea {
+    display: block; /* Ensures that each element takes up its own line */
+    width: 10000px;
+    max-width: 600px;
+    margin: 10px auto; /* Centers the elements and adds space between them */
+    padding: 10px;
+    resize: none;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    border-radius: 5px; /* Optional for rounded corners */
+    background-color: #363737;
+    border: 2px solid #363737; /* Change this to your desired border color */
+    color: white;
+}
+
+#Contact form textarea{
+    height: 150px;
+}
+
+#Contact form button {
+    background-color: #ff3b4a; /* Darker shade of green when hovering */
+    color: #363737;
+    padding: 10px 20px; /* Padding inside the button (top/bottom, left/right) */
+    font-size: 16px; /* Font size */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.50s ease; /* Smooth transition for background color change */
+    margin-left: 510px;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#Contact form button:hover {
+    background-color: #363737; /* Button background color (green) */
+    color: white; /* Text color */
+}
+
+#Contact form button:focus {
+    outline: none; /* Removes the default outline */
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Adds a subtle blue glow on focus */
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff3b4a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#back-to-top:hover {
+    background-color: #d42d3a;
+    transform: translateY(-3px);
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Footer styling - removed margin-top */
+footer {
+    background-color: #1a1a1c; /* Slightly darker than your main background */
+    padding: 30px 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.copyright {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    color: #ababab;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #ff3b4a;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }

@@ -6,6 +6,7 @@ html, body {
 
 html {
     scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    scroll-padding-top: 60px; /* Reduced from 80px to ensure anchors land properly */
 }
 
 * {
@@ -82,11 +83,6 @@ nav {
     color: #3b3b3b;
 }
 
-/* Add scroll-padding-top to ensure anchors land properly below fixed nav */
-html {
-    scroll-padding-top: 80px; /* Adjust this value based on your nav height */
-}
-
 #Home {
     background-color: #27272a; /* Dark background */
     text-align: center;
@@ -147,7 +143,7 @@ html {
     background-color: #27272a; /* Same background as Home */
     min-height: 100vh; /* Use full height */
     margin: 0; /* No margin */
-    padding: 80px 0 40px 0; /* Increased padding */
+    padding: 40px 0 40px 0; /* Reduced padding from 80px to 40px at the top */
     position: relative; /* Added to allow absolute positioning of children */
 }
 
@@ -156,61 +152,68 @@ html {
     font-size: 60px;
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    padding-top: 40px; /* Add padding to push content down */
+    padding-top: 20px; /* Reduced from 40px to 20px */
 }
 
 #About h2 {
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
     text-align: right;
-    margin-right: 615px; /* Reduce this value to move left */
-    margin-top: 50px;
+    margin-right: 615px;
+    margin-top: 10px; /* Reduced from 20px to 10px */
 }
 
 @media (min-width: 1080px) and (max-width: 1664px) {
-    #About h2{
-        margin-right: 400px; /* Adjust for screens like your Mac */
+    #About h2 {
+        margin-right: 400px;
+        margin-top: 5px; /* Even smaller for Mac screens */
     }
 }
 
-#About p{
-    border: 2px solid D3D3D3; /* Red border around the paragraph */
-    padding: 20px; /* Space inside the box */
-    margin: 20px; /* Space around the paragraph */
-    background-color: #333; /* Dark background for the box */
-    color: white; /* White text color */
-    border-radius: 15px; /* Rounded corners */
-    line-height: 1.6; /* Increase line height for readability */
-    max-width: 500px; /* Set a max width for the box */
-    text-align: left; /* Align text to the left */
+#About p {
+    border: 2px solid D3D3D3;
+    padding: 20px;
+    margin: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 15px;
+    line-height: 1.6;
+    max-width: 450px;
+    text-align: left;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    margin-left: 250px;
-    position: relative; /* Keep position */
-    z-index: 2; /* Make sure it's above other elements */
+    margin-left: 230px;
+    position: relative;
+    z-index: 2;
+    font-size: 15px;
 }
 
 @media (min-width: 1080px) and (max-width: 1664px) {
-    #About p{
-        margin-left: 150px; /* Adjust for screens like your Mac */
+    #About p {
+        max-width: 450px;
+        margin-left: 175px;
+        font-size: 14px;
+        max-width: 450px;
     }
 }
 
-.Me{
-    width: 400px;
-    height: 300px;
+.Me {
+    width: 300px;
+    height: 225px;
     border: 2px;
     object-fit: cover;
-    margin-left: 300px;
-    border-radius: 50px;
-    margin-top: -50px;
-    position: relative; /* Keep position */
-    z-index: 2; /* Make sure it's above other elements */
+    margin-left: 250px;
+    border-radius: 40px;
+    margin-top: -40px; /* Reduced from -50px to -40px */
+    position: relative;
+    z-index: 2;
 }
 
 @media (min-width: 1080px) and (max-width: 1664px) {
     .Me {
-        margin-left: 200px;
-        margin-top: -100px; /* Adjust for screens like your Mac */
+        width: 325px;
+        height: 225px;
+        margin-left: 240px;
+        margin-top: -40px; /* Reduced from -50px to -40px */
     }
 }
 
@@ -218,19 +221,29 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15px;
     text-align: center;
+    margin: 0; /* Remove margin since we're using grid gap */
 }
 
 .image-item img {
-    width: 125px; /* Standard width */
-    height: auto; /* Maintain aspect ratio */
-    border: 5px solid #071630; /* Red border */
-    padding: 15px; /* Space inside the border */
-    border-radius: 10px; /* Optional: Slightly rounded corners */
-    box-sizing: border-box; /* Ensures padding doesn't increase size */
-    margin-bottom: 8px; /* Space between image and caption */
+    width: 100px; /* Slightly smaller */
+    height: auto;
+    border: 5px solid #071630;
+    padding: 12px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
 }
+
+/* Adjust for Mac screens */
+@media (min-width: 1080px) and (max-width: 1664px) {
+    .image-container {
+        right: 80px;
+        top: 260px; /* Moved up from 280px to 260px */
+        width: 280px;
+        margin-right: 175px;
+        margin-top: -50px;
+    }
 
 .image-caption {
     color: white;
@@ -239,16 +252,19 @@ html {
     margin-top: 5px;
 }
 
+.image-item img {
+    width: 120px;
+}
+}
+
 .image-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 50%;
-    margin-left: auto;
-    padding-right: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    grid-gap: 20px; /* Gap between items */
+    width: 300px; /* Reduced width to make it compact */
     position: absolute;
-    right: 0;
-    top: 300px;
+    right: 100px; /* Adjusted position */
+    top: 280px; /* Moved up from 300px to 280px */
     z-index: 1;
 }
 
@@ -256,7 +272,7 @@ html {
     background-color: #27272a; /* Same background as Home */
     min-height: 100vh; /* Use full height */
     margin: 0; /* No margin */
-    padding: 80px 0 40px 0; /* Increased padding */
+    padding: 40px 0 40px 0; /* Reduced padding from 80px to 40px at the top */
     position: relative; /* Added to allow absolute positioning of children */
 }
 
@@ -265,14 +281,14 @@ html {
     font-size: 60px;
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    padding-top: 40px; /* Add padding to push content down */
+    padding-top: 20px; /* Reduced from 40px to 20px */
 }
 
 #Contact{
     background-color: #27272a; /* Same background as Home */
     min-height: 80vh; /* Slightly shorter height */
     margin: 0; /* No margin */
-    padding: 80px 0 40px 0; /* Increased padding */
+    padding: 40px 0 40px 0; /* Reduced padding from 80px to 40px at the top */
     position: relative; /* Added to allow absolute positioning of children */
 }
 
@@ -281,13 +297,13 @@ html {
     font-size: 60px;
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    padding-top: 40px; /* Add padding to push content down */
+    padding-top: 20px; /* Reduced from 40px to 20px */
 }
 
 #Contact p{
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     text-align: center;
-    margin-top: 40px; /* Reduced from 100px */
+    margin-top: 20px; /* Reduced from 40px to 20px */
     font-size: 20px;
     color: white;
 }
@@ -439,4 +455,9 @@ footer {
     z-index: 10;
 }
 
-  
+.image-caption {
+    color: white;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+}

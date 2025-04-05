@@ -5,37 +5,38 @@ html, body {
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
-    scroll-padding-top: 60px; /* Reduced from 80px to ensure anchors land properly */
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Reset box-sizing to ensure padding/margins don't interfere with layout */
+    box-sizing: border-box;
 }
 
 nav {
     background-color: #27272a;
     display: flex;
-    position: fixed; /* Change from sticky to fixed */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Increase z-index to ensure it stays on top */
+    z-index: 1000;
+    justify-content: center; /* Center the navigation content */
 }
 
-/* Default for larger screens (PCs) */
+/* Navigation menu - made responsive for all screen sizes */
 .portfolio-section {
     color: grey;
     list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%; /* Adjusted for better fit on PCs */
-    max-width: 1200px;
+    width: 30%; /* More consistent width */
+    min-width: 450px; /* Ensures minimum width */
+    max-width: 600px;
     margin: 0 auto;
-    padding: 0;
     margin-top: 20px;
     font-size: 18px;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
@@ -46,16 +47,9 @@ nav {
     background-color: #D3D3D3;
 }
 
-/* For screens between 1664px and 2640px (Mac and larger monitors) */
-@media (min-width: 1080px) and (max-width: 1664px) {
-    .portfolio-section {
-        width: 33%; /* Adjust for screens like your Mac */
-    }
-}
-
 .portfolio-section li {
     margin-right: 60px;
-    position: relative; /* To position the pseudo-element correctly */
+    position: relative;
 }
 
 .portfolio-section li::after {
@@ -65,13 +59,13 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: white; /* Color of the moving border */
-    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
 .portfolio-section li:hover::after {
-    width: 100%; /* When hovered, the border expands */
-    left: 0; /* Make sure it's aligned correctly */
+    width: 100%;
+    left: 0;
 }
 
 .portfolio-section li:last-child {
@@ -84,16 +78,16 @@ nav {
 }
 
 #Home {
-    background-color: #27272a; /* Dark background */
+    background-color: #27272a;
     text-align: center;
     color: white;
-    height: 100vh; /* Use exact height instead of min-height */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0; /* Ensure no margins on the section */
-    padding: 0; /* No padding */
+    margin: 0;
+    padding: 0;
 }
 
 #Home h1, #Home h2 {
@@ -114,7 +108,7 @@ nav {
 }
 
 #Home .highlight {
-    color: #ff3b4a; /* Slightly adjusted red to match the image better */
+    color: #ff3b4a;
     font-weight: 400;
 }
 
@@ -139,61 +133,60 @@ nav {
     background-color: rgba(255, 59, 74, 0.1);
 }
 
+/* About section - made responsive for all screen sizes */
 #About {
-    background-color: #27272a; /* Same background as Home */
-    min-height: 100vh; /* Use full height */
-    margin: 0; /* No margin */
-    padding: 40px 0 40px 0; /* Reduced padding from 80px to 40px at the top */
-    position: relative; /* Added to allow absolute positioning of children */
+    background-color: #27272a;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#About h1{
+#About h1 {
     text-align: center;
     font-size: 60px;
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    padding-top: 20px; /* Reduced from 40px to 20px */
+    padding-top: 20px;
+    width: 100%;
 }
 
 #About h2 {
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
     text-align: right;
-    margin-right: 615px;
-    margin-top: 10px; /* Reduced from 20px to 10px */
+    width: 80%;
+    max-width: 1200px;
+    margin: 10px 0;
+    padding-right: 15%;
 }
 
-@media (min-width: 1080px) and (max-width: 1664px) {
-    #About h2 {
-        margin-right: 400px;
-        margin-top: 5px; /* Even smaller for Mac screens */
-    }
+#About .content-wrapper {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
 }
 
 #About p {
-    border: 2px solid D3D3D3;
+    border: 2px solid #D3D3D3;
     padding: 20px;
-    margin: 20px;
     background-color: #333;
     color: white;
     border-radius: 15px;
     line-height: 1.6;
+    width: 45%;
     max-width: 450px;
     text-align: left;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    margin-left: 230px;
-    position: relative;
-    z-index: 2;
     font-size: 15px;
-}
-
-@media (min-width: 1080px) and (max-width: 1664px) {
-    #About p {
-        max-width: 450px;
-        margin-left: 175px;
-        font-size: 14px;
-        max-width: 450px;
-    }
+    margin: 0;
 }
 
 .Me {
@@ -201,20 +194,21 @@ nav {
     height: 225px;
     border: 2px;
     object-fit: cover;
-    margin-left: 250px;
     border-radius: 40px;
-    margin-top: -40px; /* Reduced from -50px to -40px */
+    margin-top: 20px;
     position: relative;
     z-index: 2;
 }
 
-@media (min-width: 1080px) and (max-width: 1664px) {
-    .Me {
-        width: 325px;
-        height: 225px;
-        margin-left: 240px;
-        margin-top: -40px; /* Reduced from -50px to -40px */
-    }
+/* Skills icons grid - made responsive */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 45%;
+    max-width: 300px;
+    margin-top: 20px;
+    z-index: 1;
 }
 
 .image-item {
@@ -222,11 +216,11 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0; /* Remove margin since we're using grid gap */
+    margin: 0;
 }
 
 .image-item img {
-    width: 100px; /* Slightly smaller */
+    width: 100px;
     height: auto;
     border: 5px solid #071630;
     padding: 12px;
@@ -235,16 +229,6 @@ nav {
     margin-bottom: 8px;
 }
 
-/* Adjust for Mac screens */
-@media (min-width: 1080px) and (max-width: 1664px) {
-    .image-container {
-        right: 80px;
-        top: 260px; /* Moved up from 280px to 260px */
-        width: 280px;
-        margin-right: 175px;
-        margin-top: -50px;
-    }
-
 .image-caption {
     color: white;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
@@ -252,109 +236,102 @@ nav {
     margin-top: 5px;
 }
 
-.image-item img {
-    width: 120px;
-}
-}
-
-.image-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
-    grid-gap: 20px; /* Gap between items */
-    width: 300px; /* Reduced width to make it compact */
-    position: absolute;
-    right: 100px; /* Adjusted position */
-    top: 280px; /* Moved up from 300px to 280px */
-    z-index: 1;
+/* Projects section */
+#Projects {
+    background-color: #27272a;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 0;
+    position: relative;
 }
 
-#Projects{
-    background-color: #27272a; /* Same background as Home */
-    min-height: 100vh; /* Use full height */
-    margin: 0; /* No margin */
-    padding: 40px 0 40px 0; /* Reduced padding from 80px to 40px at the top */
-    position: relative; /* Added to allow absolute positioning of children */
-}
-
-#Projects h1{
+#Projects h1 {
     text-align: center;
     font-size: 60px;
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    padding-top: 20px; /* Reduced from 40px to 20px */
+    padding-top: 20px;
 }
 
-#Contact{
-    background-color: #27272a; /* Same background as Home */
-    min-height: 80vh; /* Slightly shorter height */
-    margin: 0; /* No margin */
-    padding: 40px 0 40px 0; /* Reduced padding from 80px to 40px at the top */
-    position: relative; /* Added to allow absolute positioning of children */
+/* Contact section */
+#Contact {
+    background-color: #27272a;
+    min-height: 80vh;
+    margin: 0;
+    padding: 40px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#Contact h1{
+#Contact h1 {
     text-align: center;
     font-size: 60px;
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    padding-top: 20px; /* Reduced from 40px to 20px */
+    padding-top: 20px;
 }
 
-#Contact p{
+#Contact p {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     text-align: center;
-    margin-top: 20px; /* Reduced from 40px to 20px */
+    margin-top: 20px;
     font-size: 20px;
     color: white;
 }
 
-#Contact form{
+#Contact form {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 #Contact form input,
 #Contact form textarea {
-    display: block; /* Ensures that each element takes up its own line */
-    width: 10000px;
-    max-width: 600px;
-    margin: 10px auto; /* Centers the elements and adds space between them */
+    display: block;
+    width: 100%;
+    margin: 10px auto;
     padding: 10px;
     resize: none;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    border-radius: 5px; /* Optional for rounded corners */
+    border-radius: 5px;
     background-color: #363737;
-    border: 2px solid #363737; /* Change this to your desired border color */
+    border: 2px solid #363737;
     color: white;
 }
 
-#Contact form textarea{
+#Contact form textarea {
     height: 150px;
 }
 
 #Contact form button {
-    background-color: #ff3b4a; /* Darker shade of green when hovering */
+    background-color: #ff3b4a;
     color: #363737;
-    padding: 10px 20px; /* Padding inside the button (top/bottom, left/right) */
-    font-size: 16px; /* Font size */
-    border: none; /* Removes the border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-    transition: background-color 0.50s ease; /* Smooth transition for background color change */
-    margin-left: 510px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    float: right; /* Right-align the button instead of using margin */
+    margin-top: 10px;
 }
 
 #Contact form button:hover {
-    background-color: #363737; /* Button background color (green) */
-    color: white; /* Text color */
+    background-color: #363737;
+    color: white;
 }
 
 #Contact form button:focus {
-    outline: none; /* Removes the default outline */
-    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Adds a subtle blue glow on focus */
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
 }
 
+/* Back to top button */
 #back-to-top {
     position: fixed;
     bottom: 30px;
@@ -385,9 +362,9 @@ nav {
     visibility: visible;
 }
 
-/* Footer styling - removed margin-top */
+/* Footer styling */
 footer {
-    background-color: #1a1a1c; /* Slightly darker than your main background */
+    background-color: #1a1a1c;
     padding: 30px 0;
     width: 100%;
 }
@@ -430,34 +407,31 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .footer-content {
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    #About h2 {
+        padding-right: 10%;
+    }
+    
+    #About .content-wrapper {
         flex-direction: column;
-        gap: 20px;
-        text-align: center;
+        align-items: center;
+    }
+    
+    #About p, .image-container {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
     }
 }
 
+/* Particles background */
 #particles-js {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1;  /* Changed from 0 to -1 */
+    z-index: -1;
     pointer-events: none;
-}
-
-/* Make sure all interactive elements have proper z-index and position */
-.Resume {
-    position: relative;
-    z-index: 10;
-}
-
-.image-caption {
-    color: white;
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 14px;
-    margin-top: 5px;
 }

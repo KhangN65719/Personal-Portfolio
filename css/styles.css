@@ -23,18 +23,17 @@ nav {
     left: 0;
     right: 0;
     z-index: 1000;
-    justify-content: center; /* Center the navigation content */
+    justify-content: center;
 }
 
-/* Navigation menu - made responsive for all screen sizes */
 .portfolio-section {
     color: grey;
     list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%; /* More consistent width */
-    min-width: 450px; /* Ensures minimum width */
+    width: 25%;
+    min-width: 450px;
     max-width: 600px;
     margin: 0 auto;
     margin-top: 20px;
@@ -127,22 +126,21 @@ nav {
     text-decoration: none;
     display: inline-block;
     margin-top: 20px;
+    position: relative;
+    z-index: 10;
 }
 
 .Resume:hover {
     background-color: rgba(255, 59, 74, 0.1);
 }
 
-/* About section - made responsive for all screen sizes */
+/* About section - completely restructured */
 #About {
     background-color: #27272a;
     min-height: 100vh;
     margin: 0;
     padding: 40px 0;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #About h1 {
@@ -151,7 +149,7 @@ nav {
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
     padding-top: 20px;
-    width: 100%;
+    margin-bottom: 10px;
 }
 
 #About h2 {
@@ -160,18 +158,24 @@ nav {
     text-align: right;
     width: 80%;
     max-width: 1200px;
-    margin: 10px 0;
-    padding-right: 15%;
+    margin: 10px auto;
 }
 
-#About .content-wrapper {
+/* Container for about content */
+.about-container {
     display: flex;
     width: 80%;
     max-width: 1200px;
     margin: 20px auto;
-    justify-content: space-between;
-    align-items: flex-start;
     position: relative;
+}
+
+/* Left side with text and image */
+.about-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 20px;
 }
 
 #About p {
@@ -181,12 +185,10 @@ nav {
     color: white;
     border-radius: 15px;
     line-height: 1.6;
-    width: 45%;
-    max-width: 450px;
     text-align: left;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     font-size: 15px;
-    margin: 0;
+    margin-bottom: 20px;
 }
 
 .Me {
@@ -195,20 +197,24 @@ nav {
     border: 2px;
     object-fit: cover;
     border-radius: 40px;
-    margin-top: 20px;
-    position: relative;
-    z-index: 2;
+    align-self: center;
 }
 
-/* Skills icons grid - made responsive */
+/* Right side with skills icons */
+.about-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
 .image-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
-    width: 45%;
+    width: 100%;
     max-width: 300px;
-    margin-top: 20px;
-    z-index: 1;
 }
 
 .image-item {
@@ -216,7 +222,6 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0;
 }
 
 .image-item img {
@@ -236,7 +241,6 @@ nav {
     margin-top: 5px;
 }
 
-/* Projects section */
 #Projects {
     background-color: #27272a;
     min-height: 100vh;
@@ -253,16 +257,12 @@ nav {
     padding-top: 20px;
 }
 
-/* Contact section */
 #Contact {
     background-color: #27272a;
     min-height: 80vh;
     margin: 0;
     padding: 40px 0;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #Contact h1 {
@@ -317,7 +317,7 @@ nav {
     cursor: pointer;
     transition: background-color 0.5s ease;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    float: right; /* Right-align the button instead of using margin */
+    float: right;
     margin-top: 10px;
 }
 
@@ -331,7 +331,6 @@ nav {
     box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5);
 }
 
-/* Back to top button */
 #back-to-top {
     position: fixed;
     bottom: 30px;
@@ -362,7 +361,6 @@ nav {
     visibility: visible;
 }
 
-/* Footer styling */
 footer {
     background-color: #1a1a1c;
     padding: 30px 0;
@@ -407,25 +405,6 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    #About h2 {
-        padding-right: 10%;
-    }
-    
-    #About .content-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    #About p, .image-container {
-        width: 90%;
-        max-width: 600px;
-        margin: 20px auto;
-    }
-}
-
-/* Particles background */
 #particles-js {
     position: fixed;
     top: 0;
@@ -434,4 +413,55 @@ footer {
     height: 100%;
     z-index: -1;
     pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-left, .about-right {
+        width: 90%;
+        padding-right: 0;
+    }
+    
+    .about-right {
+        margin-top: 30px;
+    }
+    
+    #About h2 {
+        text-align: center;
+    }
+    
+    .portfolio-section {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-section {
+        width: 90%;
+        min-width: auto;
+        padding: 8px;
+    }
+    
+    .portfolio-section li {
+        margin-right: 30px;
+    }
+    
+    #Home h1, #Home h2 {
+        font-size: 40px;
+    }
+    
+    #About h1, #Projects h1, #Contact h1 {
+        font-size: 50px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }

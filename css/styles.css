@@ -131,7 +131,7 @@ nav {
 }
 
 .Resume:hover {
-    background-color: rgba(255, 59, 74, 0.1);
+    background-color: rgba(174, 228, 255, 0.1); /* Lighter shade of #AEE4FF */
 }
 
 /* About section - completely restructured */

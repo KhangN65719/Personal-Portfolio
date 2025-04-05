@@ -203,6 +203,7 @@ nav {
 }
 
 /* Right side with skills icons */
+/* Right side with skills icons - improved responsive scaling */
 .about-right {
     width: 50%;
     display: flex;
@@ -228,12 +229,13 @@ nav {
 
 .image-item img {
     width: 100px;
-    height: auto;
+    height: 100px; /* Fixed height to match width */
     border: 5px solid #071630;
     padding: 12px;
     border-radius: 10px;
     box-sizing: border-box;
     margin-bottom: 8px;
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
 }
 
 .image-caption {
@@ -241,6 +243,38 @@ nav {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     font-size: 14px;
     margin-top: 5px;
+}
+
+/* Additional media queries for better responsiveness */
+@media (max-width: 1200px) {
+    .image-item img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-item img {
+        width: 80px;
+        height: 80px;
+        padding: 10px;
+    }
+    
+    .image-container {
+        grid-gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-item img {
+        width: 70px;
+        height: 70px;
+        padding: 8px;
+    }
+    
+    .image-container {
+        grid-gap: 10px;
+    }
 }
 
 #Projects {

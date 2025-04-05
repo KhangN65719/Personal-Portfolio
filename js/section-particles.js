@@ -32,20 +32,20 @@ document.addEventListener('DOMContentLoaded', function() {
       // Different configurations for each section with more visible colors
       const configs = {
         'about': {
-          color: '#ff3b4a', // Brighter blue
-          number: 30,
+          color: '#AEE4FF', // cyan
+          number: 40,     // Number of particles
           opacity: 0.5,  // Increased opacity
-          speed: 0.6
+          speed: 0.5
         },
         'projects': {
-          color: '#ff3b4a', // Teal/cyan color
-          number: 40,
+          color: '#AEE4FF', // cyan
+          number: 30,     // Number of particles
           opacity: 0.5,  // Increased opacity
-          speed: 0.7
+          speed: 0.5
         },
         'contact': {
-          color: '#ff3b4a', // Light green
-          number: 25,
+          color: '#AEE4FF', // Light cyan
+          number: 25,     // Number of particles
           opacity: 0.5,  // Increased opacity
           speed: 0.5
         }

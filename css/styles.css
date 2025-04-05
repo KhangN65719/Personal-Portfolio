@@ -107,14 +107,14 @@ nav {
 }
 
 #Home .highlight {
-    color: #ff3b4a;
+    color: #AEE4FF;
     font-weight: 400;
 }
 
 .Resume {
     background-color: transparent;
-    color: #ff3b4a;
-    border: 2px solid #ff3b4a;
+    color: #AEE4FF;
+    border: 2px solid #AEE4FF;
     padding: 8px 40px;
     font-size: 18px;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
@@ -311,7 +311,7 @@ nav {
 }
 
 #Contact form button {
-    background-color: #ff3b4a;
+    background-color: #AEE4FF;
     color: #363737;
     padding: 10px 20px;
     font-size: 16px;
@@ -340,7 +340,7 @@ nav {
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: #ff3b4a;
+    background-color: #AEE4FF;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -355,7 +355,7 @@ nav {
 }
 
 #back-to-top:hover {
-    background-color: #d42d3a;
+    background-color: #363737;
     transform: translateY(-3px);
 }
 
@@ -403,7 +403,7 @@ footer {
 }
 
 .social-icon:hover {
-    background-color: #ff3b4a;
+    background-color: #AEE4FF;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

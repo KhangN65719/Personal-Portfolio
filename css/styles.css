@@ -24,30 +24,39 @@ nav {
     left: 0;
     right: 0;
     z-index: 1000;
-    justify-content: center;
-    padding: 20px 0;
-    transition: all 0.3s ease;
+    height: 60px;
+    justify-content: flex-end;
+    transition: background-color 0.3s ease;
 }
 
 .portfolio-section {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
+    width: auto;
+    margin: 0;
+    padding: 0 40px 0 0;
+    background-color: transparent;
     font-size: 16px;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    height: 100%;
+    position: absolute;
+    right: 0;
     border: none;
     border-radius: 0;
-    padding: 0;
-    background-color: transparent;
 }
 
 .portfolio-section li {
     margin: 0 20px;
     position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.portfolio-section li:last-child {
+    margin-right: 0;
 }
 
 .portfolio-section li a {
@@ -87,7 +96,6 @@ nav {
 }
 
 nav.scrolled {
-    padding: 15px 0;
     background-color: rgba(39, 39, 42, 0.95);
 }
 
@@ -608,7 +616,7 @@ footer {
 
 @media (max-width: 768px) {
     .portfolio-section {
-        width: 90%;
+        padding: 0 20px 0 0;
     }
     
     .portfolio-section li {

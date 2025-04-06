@@ -16,7 +16,8 @@ html {
 }
 
 nav {
-    background-color: #27272a;
+    background-color: rgba(39, 39, 42, 0.8);
+    backdrop-filter: blur(10px);
     display: flex;
     position: fixed;
     top: 0;
@@ -24,56 +25,70 @@ nav {
     right: 0;
     z-index: 1000;
     justify-content: center;
+    padding: 20px 0;
+    transition: all 0.3s ease;
 }
 
 .portfolio-section {
-    color: grey;
     list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    min-width: 450px;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    border: 2px solid #D3D3D3;
-    border-radius: 100px;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: #D3D3D3;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
 }
 
 .portfolio-section li {
-    margin-right: 60px;
+    margin: 0 20px;
     position: relative;
 }
 
-.portfolio-section li::after {
+.portfolio-section li a {
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    padding: 8px 0;
+    position: relative;
+}
+
+.portfolio-section li a:hover {
+    opacity: 1;
+}
+
+.portfolio-section li a::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
-    background-color: white;
-    transition: width 0.3s ease, left 0.3s ease;
+    background-color: #AEE4FF;
+    transition: width 0.3s ease;
 }
 
-.portfolio-section li:hover::after {
+.portfolio-section li a:hover::after {
     width: 100%;
-    left: 0;
 }
 
-.portfolio-section li:last-child {
-    margin-right: 0;
+.portfolio-section li a.active {
+    opacity: 1;
 }
 
-.portfolio-section li a {
-    text-decoration: none;
-    color: #3b3b3b;
+.portfolio-section li a.active::after {
+    width: 100%;
+}
+
+nav.scrolled {
+    padding: 15px 0;
+    background-color: rgba(39, 39, 42, 0.95);
 }
 
 #Home {
@@ -589,21 +604,15 @@ footer {
     .skill-list, .interest-list {
         justify-content: center;
     }
-    
-    .portfolio-section {
-        width: 80%;
-    }
 }
 
 @media (max-width: 768px) {
     .portfolio-section {
         width: 90%;
-        min-width: auto;
-        padding: 8px;
     }
     
     .portfolio-section li {
-        margin-right: 30px;
+        margin: 0 15px;
     }
     
     #Home h1, #Home h2 {
@@ -656,5 +665,13 @@ footer {
     .skill-logo {
         width: 40px;
         height: 40px;
+    }
+    
+    .portfolio-section li {
+        margin: 0 10px;
+    }
+    
+    .portfolio-section li a {
+        font-size: 14px;
     }
 }

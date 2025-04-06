@@ -134,13 +134,16 @@ nav {
     background-color: rgba(174, 228, 255, 0.1); /* Lighter shade of #AEE4FF */
 }
 
-/* About section - completely restructured */
+/* About section - completely redesigned */
 #About {
     background-color: #27272a;
     min-height: 100vh;
     margin: 0;
-    padding: 40px 0;
+    padding: 80px 0 40px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #About h1 {
@@ -148,100 +151,210 @@ nav {
     font-size: 60px;
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    padding-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+#About h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #AEE4FF;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #About h2 {
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    text-align: right;
-    width: 80%;
-    max-width: 1200px;
-    margin: 10px auto;
-    margin-right: 625px;
-}
-
-/* Container for about content */
-.about-container {
-    display: flex;
-    width: 80%;
-    max-width: 1200px;
-    margin: 20px auto;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
     position: relative;
 }
 
-/* Left side with text and image */
-.about-left {
+#About h2::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background-color: #AEE4FF;
+    bottom: -8px;
+    left: 0;
+}
+
+.about-container {
+    display: flex;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.about-text-container {
+    flex: 1;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
-    width: 50%;
-    padding-right: 20px;
+    gap: 30px;
 }
 
-.Me {
-    width: 350px;
-    height: 250px;
-    border: 2px;
-    object-fit: cover;
-    border-radius: 40px;
-    align-self: center;
-    margin-bottom: 20px;
-    margin-right: 75px;
-}
-
-#About p {
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    border-radius: 15px;
-    line-height: 1.6;
-    text-align: left;
+.about-intro {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 15px;
-    margin-bottom: 20px;
-    width: 500px;
+    font-size: 32px;
+    color: white;
+    font-weight: 300;
+    line-height: 1.4;
 }
 
-/* Right side with skills icons */
-.about-right {
-    width: 50%;
+.about-intro .highlight {
+    color: #AEE4FF;
+    font-weight: 500;
+}
+
+.about-details {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 40px;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.image-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    width: 100%;
-    max-width: 300px;
+.about-details p {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    color: #e0e0e0;
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-.image-item {
+.about-skills, .about-interests {
+    margin-top: 20px;
+}
+
+.skill-list, .interest-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-}
-
-.image-item img {
     width: 100px;
-    height: auto;
-    border: 5px solid #071630;
-    padding: 12px;
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin-bottom: 8px;
 }
 
-.image-caption {
-    color: white;
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    background-color: #363636;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.skill-name {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    color: #e0e0e0;
     font-size: 14px;
-    margin-top: 5px;
+}
+
+.interest-list {
+    display: flex;
+    gap: 30px;
+}
+
+.interest-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.interest-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #363636;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #AEE4FF;
+    transition: transform 0.3s;
+}
+
+.interest-icon:hover {
+    transform: rotate(10deg);
+}
+
+.interest-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.interest-item span {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+.about-image-container {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-frame {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s;
+}
+
+.profile-frame:hover {
+    transform: translateY(-10px) rotate(2deg);
+}
+
+.profile-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    z-index: 1;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+    display: block;
+}
+
+.profile-frame:hover .profile-image {
+    transform: scale(1.05);
 }
 
 #Projects {
@@ -258,6 +371,19 @@ nav {
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
     padding-top: 20px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+#Projects h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #AEE4FF;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #Contact {
@@ -274,6 +400,19 @@ nav {
     font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
     color: white;
     padding-top: 20px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+#Contact h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #AEE4FF;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #Contact p {
@@ -425,17 +564,30 @@ footer {
         align-items: center;
     }
     
-    .about-left, .about-right {
+    .about-text-container {
         width: 90%;
-        padding-right: 0;
     }
     
-    .about-right {
-        margin-top: 30px;
+    .about-image-container {
+        margin-bottom: 40px;
+        order: -1;
     }
     
     #About h2 {
         text-align: center;
+    }
+    
+    #About h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-intro {
+        text-align: center;
+    }
+    
+    .skill-list, .interest-list {
+        justify-content: center;
     }
     
     .portfolio-section {
@@ -462,9 +614,47 @@ footer {
         font-size: 50px;
     }
     
+    .about-intro {
+        font-size: 24px;
+    }
+    
+    .interest-list {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
     .footer-content {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+    }
+    
+    .profile-frame {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    #About {
+        padding: 60px 0 20px;
+    }
+    
+    #About h1 {
+        font-size: 40px;
+    }
+    
+    .skill-list {
+        gap: 15px;
+    }
+    
+    .skill-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .skill-logo {
+        width: 40px;
+        height: 40px;
     }
 }

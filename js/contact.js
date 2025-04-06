@@ -146,7 +146,6 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     } else {
         errorMsg.style.display = 'none';
         successMsg.style.display = 'block';
-        emailInput.style.border = '2px solid green';
 
         // If you're using EmailJS or sending data via AJAX, you'd handle it here
         // Otherwise the form just submits

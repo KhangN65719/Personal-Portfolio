@@ -1,0 +1,25 @@
+# macOS system files
+.DS_Store
+
+# Node modules (if using Node.js in the future)
+node_modules/
+
+# Logs
+*.log
+
+# VS Code settings (optional)
+.vscode/
+
+# Build/dist folders (if using a bundler like Webpack or Parcel)
+dist/
+build/
+
+# Environment variables
+.env
+
+# Thumbnails or system-generated files
+Thumbs.db
+
+# Mac folder attributes
+.AppleDouble
+.LSOverride

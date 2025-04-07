@@ -1,55 +1,65 @@
-KhangNguyen.com - Personal Portfolio
-Welcome to my personal portfolio! This website is a showcase of my skills, experience, and projects as I progress through my studies in Computer Science. Here you can find details about my background, the technologies I work with, and how to get in touch with me.
+# 🌐 KhangNguyen.com - Personal Portfolio
 
-Table of Contents
-About Me
+Welcome to my personal portfolio website! This site serves as a showcase of my skills, experience, and projects as I continue my journey in Computer Science. Here, you'll find insights into my background, the technologies I use, and ways to connect with me.
 
-Technologies
+---
 
-Projects
+## 📌 Table of Contents
+- [About Me](#about-me)
+- [Technologies](#technologies)
+- [Projects](#projects)
+- [Contact](#contact)
+- [Resume](#resume)
 
-Contact
+---
 
-About Me
-I am a second-year Computer Science student at the University of Illinois Chicago. I am passionate about programming, particularly backend development, and enjoy tackling the problem-solving challenges that come with it. When I’m not coding, I stay active by exercising, reading, and cooking—these activities help me maintain a balanced life and come back to my work with fresh ideas.
+## 👨‍💻 About Me
 
+I'm a second-year Computer Science student at the University of Illinois Chicago with a strong interest in backend development and problem-solving. Outside of coding, I enjoy exercising, reading, and cooking—activities that help me maintain balance and spark creativity in my work.
 
+---
 
-Technologies
-I am familiar with various programming languages and tools, including:
+## 🛠️ Technologies
 
-Programming Languages: C++, C, Python
+Here are some of the technologies and tools I'm familiar with:
 
-Version Control: Git
+- **Programming Languages**: C++, C, Python  
+- **Version Control**: Git  
+- **Web Development**: HTML, CSS *(used in this portfolio)*  
+- **Backend Development**: Strong interest in server-side logic and infrastructure
 
-Web Development: HTML, CSS (included in the portfolio)
+---
 
-Backend Development: Passion for backend programming and server-side logic
+## 🚀 Projects
 
-Projects
-1. Personal Portfolio Website
-This website serves as my online portfolio. It highlights my skills, provides insights into my work, and includes downloadable resources like my resume.
+### 1. **Personal Portfolio Website** _(this site)_
+This website acts as my digital resume and hub for all my work and interests.
 
-Key Features:
+**Key Features:**
+- A personal introduction and downloadable resume
+- "About Me" section with background and skills
+- "Projects" section (more coming soon!)
+- "Contact" section with relevant links
 
-Personal introduction with a section to view my resume.
+### 2. **Future Projects**
+Stay tuned! I’ll be adding more projects related to backend development, coursework, and personal experiments as I continue to learn and grow.
 
-An "About Me" section with a brief biography and skills list.
+---
 
-"Projects" section for showcasing my works (coming soon).
+## 📫 Contact
 
-"Contact" section with contact information.
+Feel free to connect with me:
 
-2. Future Projects
-As I continue learning and developing, I’ll be adding new projects related to my studies and personal development. Be sure to check back for updates!
+- 📧 **Email**: [winnguyen0919@gmail.com](mailto:winnguyen0919@gmail.com)  
+- 💼 **LinkedIn**: [linkedin.com/in/khang-nguyen-b044ba279](https://www.linkedin.com/in/khang-nguyen-b044ba279)  
+- 💻 **GitHub**: [github.com/KhangN65719](https://github.com/KhangN65719)  
 
-Contact
-Feel free to reach out to me via the following:
+---
 
-Email: [Winnguyen0919@gmail.com]
+## 📄 Resume
 
-LinkedIn: [www.linkedin.com/in/khang-nguyen-b044ba279]
+You can view or download my resume [here](Pdf/Khang_S_Resume.pdf).
 
-GitHub: [https://github.com/KhangN65719]
+---
 
-Resume: [Pdf/Khang_S_Resume.pdf]
+Thanks for visiting my portfolio! 👋

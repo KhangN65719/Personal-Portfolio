@@ -13,7 +13,8 @@
     <nav>         
         <ul class="portfolio-section">             
             <li><a href="#Home">Home</a></li>              
-            <li><a href="#About">About</a></li>             
+            <li><a href="#About">About</a></li>
+            <li><a href="#Experience">Experience</a></li>               
             <li><a href="#Projects">Projects</a></li>              
             <li><a href="#Contact">Contact</a></li>         
         </ul>     
@@ -74,7 +75,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="about-interests">
                     <h2>Interests</h2>
                     <div class="interest-list">
@@ -113,7 +113,6 @@
                     </div>
                 </div>
             </div>
-            
             <div class="about-image-container">
                 <div class="profile-frame">
                     <img src="Images/Me.jpg" alt="A photo of Khang Nguyen" class="profile-image">
@@ -121,7 +120,60 @@
             </div>
         </div>
     </section>
+<!-- Experience section -->
+<section id="Experience">
+    <header>
+        <h1>Experience</h1>
+    </header>
     
+    <div class="exp-container">
+        <!-- Experience Tabs -->
+        <div class="exp-tabs">
+            <button class="exp-tab-button exp-active" data-target="tech-company"></button>
+            <button class="exp-tab-button" data-target="uic-research"></button>
+            <button class="exp-tab-button" data-target="peer-tutor"></button>
+            <div class="exp-tab-slider"></div>
+        </div>
+        
+        <!-- Experience Content -->
+        <div class="exp-content-container">
+            <!-- Tech Company Tab Content -->
+            <div class="exp-content exp-active" id="tech-company">
+                <div class="exp-position"></div>
+                <div class="exp-duration"></div>
+                <ul class="exp-details">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            
+            <!-- UIC Research Tab Content -->
+            <div class="exp-content" id="uic-research">
+                <div class="exp-position"></div>
+                <div class="exp-duration"></div>
+                <ul class="exp-details">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            
+            <!-- Peer Tutor Tab Content -->
+            <div class="exp-content" id="peer-tutor">
+                <div class="exp-position"></div>
+                <div class="exp-duration"></div>
+                <ul class="exp-details">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- Project section --> 
     <section id="Projects">     
         <header>         
@@ -311,5 +363,6 @@
     <script src="js/particles-config.js"></script>
     <script src="js/section-particles.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/experience-tab.js"></script>
 </body>
 </html>

@@ -610,7 +610,7 @@ nav.scrolled {
 
 /* Projects Section Styling */
 .projects-container {
-    width: 85%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -855,7 +855,7 @@ nav.scrolled {
 #Contact form {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     text-align: center;
-    width: 80%;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
 }

@@ -157,7 +157,6 @@ nav.scrolled {
     background-color: rgba(174, 228, 255, 0.1); /* Lighter shade of #AEE4FF */
 }
 
-/* About section - completely redesigned */
 #About {
     background-color: #27272a;
     min-height: 100vh;
@@ -378,6 +377,204 @@ nav.scrolled {
 
 .profile-frame:hover .profile-image {
     transform: scale(1.05);
+}
+
+/* Experience Section Styles */
+#Experience {
+    background-color: #27272a;
+    min-height: 100vh;
+    margin: 0;
+    padding: 80px 0 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Experience h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Overpass', 'Helvetica Neue', Arial, sans-serif;
+    color: white;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+#Experience h1::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #AEE4FF;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.exp-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #333336;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Tabs Navigation */
+.exp-tabs {
+    display: flex;
+    position: relative;
+    background-color: #3a3a3e;
+    border-bottom: 1px solid #444448;
+    padding: 0;
+}
+
+.exp-tab-button {
+    flex: 1;
+    border: none;
+    background: none;
+    padding: 20px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    color: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.exp-tab-button:hover {
+    opacity: 1;
+    color: #ffffff;
+}
+
+.exp-tab-button.exp-active {
+    color: #AEE4FF;
+    opacity: 1;
+}
+
+.exp-tab-slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #AEE4FF;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+/* Content Styles */
+.exp-content-container {
+    padding: 40px;
+    position: relative;
+    min-height: 280px;
+}
+
+.exp-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    display: none;
+}
+
+.exp-content.exp-active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: block;
+    position: relative;
+}
+
+.exp-position {
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.exp-duration {
+    font-size: 16px;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    color: #AEE4FF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.exp-details {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.exp-details li {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    position: relative;
+    padding-left: 25px;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    color: #e0e0e0;
+    font-size: 16px;
+}
+
+.exp-details li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: #AEE4FF;
+    border-radius: 50%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .exp-tabs {
+        flex-direction: column;
+    }
+    
+    .exp-tab-slider {
+        display: none;
+    }
+    
+    .exp-tab-button {
+        text-align: left;
+        padding-left: 30px;
+        border-left: 3px solid transparent;
+    }
+    
+    .exp-tab-button.exp-active {
+        border-left: 3px solid #AEE4FF;
+        background-color: rgba(174, 228, 255, 0.05);
+    }
+    
+    .exp-content-container {
+        padding: 25px;
+    }
+    
+    .exp-content {
+        padding: 25px;
+    }
+    
+    .exp-position {
+        font-size: 28px;
+    }
+
+    #Experience h1 {
+        font-size: 48px;
+    }
 }
 
 #Projects {

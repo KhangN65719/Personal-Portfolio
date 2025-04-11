@@ -1,10 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Tab functionality
     const tabButtons = document.querySelectorAll('.exp-tab-button');
     const tabContents = document.querySelectorAll('.exp-content');
     const tabSlider = document.querySelector('.exp-tab-slider');
     
-    // Initial tab slider position
-    updateTabSlider();
+    // Set initial tab slider position
+    if (tabSlider && tabButtons.length > 0) {
+        const activeTab = document.querySelector('.exp-tab-button.exp-active');
+        if (activeTab) {
+            updateTabSlider(activeTab);
+        }
+    }
     
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -15,33 +21,42 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add active class to clicked button
             this.classList.add('exp-active');
             
-            // Show corresponding content
-            const targetId = this.getAttribute('data-target');
-            document.getElementById(targetId).classList.add('exp-active');
-            
             // Update tab slider position
-            updateTabSlider();
+            if (tabSlider) {
+                updateTabSlider(this);
+            }
+            
+            // Show corresponding content
+            const tabId = this.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('exp-active');
         });
     });
     
-    // Update tab slider position based on active tab
-    function updateTabSlider() {
-        const activeTab = document.querySelector('.exp-tab-button.exp-active');
-        if (activeTab && window.innerWidth > 768) {
-            const tabPosition = activeTab.offsetLeft;
-            const tabWidth = activeTab.offsetWidth;
-            
-            tabSlider.style.width = `${tabWidth}px`;
-            tabSlider.style.left = `${tabPosition}px`;
+    function updateTabSlider(activeTab) {
+        // Only update slider if we're not in mobile view
+        if (window.innerWidth > 768) {
+            tabSlider.style.width = `${activeTab.offsetWidth}px`;
+            tabSlider.style.left = `${activeTab.offsetLeft}px`;
         }
     }
     
-    // Handle window resize
+    // Update tab slider on window resize
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 768) {
-            updateTabSlider();
-        } else {
-            tabSlider.style.width = '0';
+        const activeTab = document.querySelector('.exp-tab-button.exp-active');
+        if (activeTab && tabSlider) {
+            updateTabSlider(activeTab);
         }
+    });
+    
+    // Add hover effect to list items
+    const expItems = document.querySelectorAll('.exp-details li');
+    expItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.color = '#ffffff';
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            this.style.color = '#e6e6e6';
+        });
     });
 });

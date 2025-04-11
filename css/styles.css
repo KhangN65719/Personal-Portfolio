@@ -379,12 +379,12 @@ nav.scrolled {
     transform: scale(1.05);
 }
 
-/* Experience Section Styles */
+/* Enhanced Experience Section Styles */
 #Experience {
     background-color: #27272a;
     min-height: 100vh;
     margin: 0;
-    padding: 80px 0 40px;
+    padding: 80px 0 60px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -398,36 +398,42 @@ nav.scrolled {
     color: white;
     margin-bottom: 60px;
     position: relative;
+    z-index: 2;
 }
 
 #Experience h1::after {
     content: '';
     position: absolute;
-    width: 60px;
+    width: 80px; /* Wider underline */
     height: 4px;
     background-color: #AEE4FF;
     bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
+    /* Removed box-shadow glow effect */
 }
 
 .exp-container {
     width: 85%;
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #333336;
+    background-color: rgba(51, 51, 54, 0.8); /* More transparent */
     border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Removed blue glow */
     overflow: hidden;
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(174, 228, 255, 0.1); /* Subtle border */
 }
 
-/* Tabs Navigation */
+/* Tabs Navigation - Cleaner design without icons */
 .exp-tabs {
     display: flex;
     position: relative;
-    background-color: #3a3a3e;
-    border-bottom: 1px solid #444448;
+    background-color: rgba(58, 58, 62, 0.8);
+    border-bottom: 1px solid rgba(174, 228, 255, 0.2); /* More visible separator */
     padding: 0;
 }
 
@@ -436,7 +442,7 @@ nav.scrolled {
     border: none;
     background: none;
     padding: 20px 15px;
-    font-size: 1rem;
+    font-size: 1.1rem; /* Slightly larger */
     font-weight: 500;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     color: #e0e0e0;
@@ -446,16 +452,23 @@ nav.scrolled {
     outline: none;
     z-index: 2;
     opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px; /* Better letter spacing */
 }
 
 .exp-tab-button:hover {
     opacity: 1;
     color: #ffffff;
+    background-color: rgba(174, 228, 255, 0.08);
 }
 
 .exp-tab-button.exp-active {
     color: #AEE4FF;
     opacity: 1;
+    background-color: rgba(174, 228, 255, 0.15);
+    font-weight: 600;
 }
 
 .exp-tab-slider {
@@ -464,6 +477,7 @@ nav.scrolled {
     left: 0;
     height: 3px;
     background-color: #AEE4FF;
+    /* Removed box-shadow glow effect */
     transition: all 0.3s ease;
     z-index: 1;
 }
@@ -472,7 +486,7 @@ nav.scrolled {
 .exp-content-container {
     padding: 40px;
     position: relative;
-    min-height: 280px;
+    min-height: 320px; /* Slightly taller */
 }
 
 .exp-content {
@@ -483,7 +497,7 @@ nav.scrolled {
     padding: 40px;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.3s ease;
+    transition: all 0.4s ease; /* Slightly slower for smoother transition */
     pointer-events: none;
     display: none;
 }
@@ -496,36 +510,81 @@ nav.scrolled {
     position: relative;
 }
 
+.exp-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px; /* More spacing */
+    position: relative;
+}
+
+.exp-header::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(174, 228, 255, 0.3), transparent);
+}
+
+.exp-title {
+    margin-right: 15px;
+}
+
 .exp-position {
     font-size: 32px;
     font-weight: 300;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     color: white;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    /* Removed text-shadow glow */
+}
+
+.exp-company {
+    font-size: 22px;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    color: #AEE4FF;
+    margin-bottom: 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .exp-duration {
     font-size: 16px;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     color: #AEE4FF;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     font-weight: 500;
     letter-spacing: 0.5px;
+    padding: 8px 18px;
+    background-color: rgba(174, 228, 255, 0.12);
+    border-radius: 30px; /* More rounded */
+    display: inline-block;
+    /* Removed box-shadow glow */
+    border: 1px solid rgba(174, 228, 255, 0.2);
 }
 
 .exp-details {
     padding-left: 20px;
     list-style-type: none;
+    margin-top: 25px;
 }
 
 .exp-details li {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     line-height: 1.8;
     position: relative;
-    padding-left: 25px;
+    padding-left: 28px;
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
-    color: #e0e0e0;
+    color: #e6e6e6; /* Slightly brighter */
     font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.exp-details li:hover {
+    transform: translateX(5px);
 }
 
 .exp-details li::before {
@@ -537,6 +596,40 @@ nav.scrolled {
     height: 8px;
     background-color: #AEE4FF;
     border-radius: 50%;
+    transition: all 0.3s ease;
+    /* Removed box-shadow glow */
+}
+
+.exp-details li:hover::before {
+    transform: scale(1.5);
+    background-color: #ffffff;
+}
+
+.exp-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 35px;
+}
+
+.exp-tech span {
+    background-color: rgba(174, 228, 255, 0.12);
+    color: #AEE4FF;
+    padding: 8px 16px;
+    border-radius: 30px; /* More rounded */
+    font-size: 14px;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(174, 228, 255, 0.15);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.exp-tech span:hover {
+    background-color: rgba(174, 228, 255, 0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: white;
 }
 
 /* Media Queries */
@@ -545,23 +638,25 @@ nav.scrolled {
         flex-direction: column;
     }
     
+    .exp-tab-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        padding: 15px 20px;
+        border-left: 3px solid transparent;
+    }
+    
     .exp-tab-slider {
         display: none;
     }
     
-    .exp-tab-button {
-        text-align: left;
-        padding-left: 30px;
-        border-left: 3px solid transparent;
-    }
-    
     .exp-tab-button.exp-active {
         border-left: 3px solid #AEE4FF;
-        background-color: rgba(174, 228, 255, 0.05);
     }
     
     .exp-content-container {
-        padding: 25px;
+        padding: 30px 25px;
     }
     
     .exp-content {
@@ -571,9 +666,41 @@ nav.scrolled {
     .exp-position {
         font-size: 28px;
     }
+    
+    .exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .exp-duration {
+        margin-top: 15px;
+    }
 
     #Experience h1 {
         font-size: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exp-container {
+        width: 92%;
+    }
+    
+    .exp-position {
+        font-size: 24px;
+    }
+    
+    .exp-company {
+        font-size: 18px;
+    }
+    
+    .exp-tech {
+        gap: 8px;
+    }
+    
+    .exp-tech span {
+        font-size: 12px;
+        padding: 6px 12px;
     }
 }
 

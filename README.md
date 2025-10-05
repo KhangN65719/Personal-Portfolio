@@ -58,7 +58,7 @@ Feel free to connect with me:
 
 ## 📄 Resume
 
-You can view or download my resume [here](Pdf/Khang_S_Resume.pdf).
+You can view or download my resume [here](Pdf/Resume.pdf).
 
 ---
 

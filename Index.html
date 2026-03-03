@@ -14,7 +14,6 @@
         <ul class="portfolio-section">             
             <li><a href="#Home">Home</a></li>              
             <li><a href="#About">About</a></li>
-            <li><a href="#Experience">Experience</a></li>               
             <li><a href="#Projects">Projects</a></li>              
             <li><a href="#Contact">Contact</a></li>         
         </ul>     
@@ -39,7 +38,7 @@
                 
                 <div class="about-details">
                     <p>
-                        Currently in my second year, I'm passionate about programming with a strong interest in backend development. What drives me is the problem-solving aspect of coding and the thrill of creating something new from scratch.
+                        Currently in my third year, I'm passionate about programming with a strong interest in backend development. What drives me is the problem-solving aspect of coding and the thrill of creating something new from scratch.
                     </p>
                     <p>
                         When I'm not coding, you'll find me exercising, reading, or cooking - hobbies that keep me grounded and inspire fresh perspectives when I return to my work.
@@ -120,100 +119,6 @@
             </div>
         </div>
     </section>
-    <section id="Experience">
-        <h1>Experience</h1>
-        <div class="exp-container">
-            <!-- Tabs Navigation -->
-            <div class="exp-tabs">
-                <!-- Tab 1 - Removed icon container -->
-                <button class="exp-tab-button exp-active" data-tab="tab1">
-                    Company One
-                </button>
-                
-                <!-- Tab 2 - Removed icon container -->
-                <button class="exp-tab-button" data-tab="tab2">
-                    Company Two
-                </button>
-                
-                <!-- Tab 3 - Removed icon container -->
-                <button class="exp-tab-button" data-tab="tab3">
-                    Company Three
-                </button>
-                
-                <!-- Tab slider (for desktop view) -->
-                <div class="exp-tab-slider"></div>
-            </div>
-            
-            <!-- Content Container -->
-            <div class="exp-content-container">
-                <!-- Content 1 -->
-                <div class="exp-content exp-active" id="tab1">
-                    <div class="exp-header">
-                        <div class="exp-title">
-                            <h3 class="exp-position"></h3>
-                            <p class="exp-company">Company One</p>
-                        </div>
-                        <span class="exp-duration"></span>
-                    </div>
-                    <ul class="exp-details">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <div class="exp-tech">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                
-                <!-- Content 2 -->
-                <div class="exp-content" id="tab2">
-                    <div class="exp-header">
-                        <div class="exp-title">
-                            <h3 class="exp-position"></h3>
-                            <p class="exp-company">Company Two</p>
-                        </div>
-                        <span class="exp-duration"></span>
-                    </div>
-                    <ul class="exp-details">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <div class="exp-tech">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-                
-                <!-- Content 3 -->
-                <div class="exp-content" id="tab3">
-                    <div class="exp-header">
-                        <div class="exp-title">
-                            <h3 class="exp-position"></h3>
-                            <p class="exp-company">Company Three</p>
-                        </div>
-                        <span class="exp-duration"></span>
-                    </div>
-                    <ul class="exp-details">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <div class="exp-tech">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- Project section --> 
     <section id="Projects">     
         <header>         
@@ -224,25 +129,26 @@
             <!-- Project 1 -->
             <div class="project-card">
                 <div class="project-content">
-                    <h3>Personal Portfolio Website</h3>
+                    <h3>Url Shortener</h3>
                     <p class="project-description">
-                        A responsive personal portfolio website built from scratch using HTML, CSS, and JavaScript. Features smooth scrolling, 
-                        interactive elements, and a contact form. Designed with a focus on clean, modern aesthetics and user experience.
+                        A full-stack web application for shortening and redirecting URLs, built with a RESTful Go backend using Gin and persistent SQLite storage via GORM. 
+                        Features a clean server-rendered frontend with form handling, input validation, and seamless redirects. Designed with a modular project structure separating handlers,
+                        services, and routes for maintainability and scalability.
                     </p>
                     <div class="project-tech">
-                        <span>HTML</span>
-                        <span>CSS</span>
+                        <span>Go</span>
+                        <span>Gin</span>
+                        <span>GORM</span>
                         <span>JavaScript</span>
-                        <span>Responsive Design</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/KhangN65719/Personal-Portfolio" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <a href="https://github.com/KhangN65719/Url-Shortener" target="_blank" rel="noopener noreferrer" class="project-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                             <span>GitHub</span>
                         </a>
-                        <a href="#" class="project-link">
+                        <a href="" class="project-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <line x1="2" y1="12" x2="22" y2="12"></line>
@@ -253,33 +159,25 @@
                     </div>
                 </div>
                 <div class="project-image">
-                    <img src="Images/personalportfolio.png" alt="Portfolio Website Project" />
+                    <!-- <img src="" alt="" /> -->
                 </div>
             </div>
             <!-- Project 2 -->
             <div class="project-card">
                 <div class="project-content">
-                    <h3>Red Light Cameras</h3>
+                    <h3>Campus Pathfinding System</h3>
                     <p class="project-description">
-                        This program processes and analyzes red light camera violation data from the city of Chicago. It reads in structured data from a file and organizes it into camera records and neighborhoods. 
-                        Users can interact with the program through a menu-driven interface to: 
-                        View an overview of the dataset, see violation statistics by neighborhood
-                        Display a monthly violations chart, search for specific camera locations
+                        A navigation tool that computes the shortest walking route between campus buildings using Dijkstra's algorithm. 
+                        Parses JSON map data to construct a weighted adjacency-list graph and handles real-world constraints like blocked paths and ignored vertices.
+                        Built with reusable, well-structured graph classes focused on clean separation of concerns and performance.
                     </p>
                     <div class="project-tech">
                         <span>C++</span>
-                        <span>Data Processing</span>
+                        <span>Dijkstra</span>
                         <span>Real-World Dataset</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://docs.google.com/spreadsheets/d/1OcuBFx2kPXRrqnugUUWg5FRDr_Hv2VyZn_9rqHiZqpU/edit?usp=sharing" class="project-link" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="9" y1="3" x2="9" y2="21"></line>
-                            </svg>
-                            <span>Documentation</span>
-                        </a>    
-                        <a href="https://github.com/KhangN65719/UIC-Projects/tree/main/Projects%20CS%20141/Red%20Light%20Camera" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <a href="https://github.com/KhangN65719/Campus-Pathfinding-System.git" target="_blank" rel="noopener noreferrer" class="project-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
@@ -294,32 +192,24 @@
             <!--Project 3-->
             <div class="project-card">
                 <div class="project-content">
-                    <h3>Data Structure Visualizer</h3>
+                    <h3>Chicago Traffic Camera Data Analysis</h3>
                     <p class="project-description">
-                        An interactive tool that visualizes various data structures like linked lists, trees, and graphs. 
-                        Helps students understand complex data structures through visual representation and step-by-step 
-                        animations of common operations.
+                        An interactive, menu-driven application for exploring and analyzing thousands of Chicago traffic camera violation records stored in SQLite.
+                        Features complex SQL queries for trends by camera, intersection, and date, alongside Matplotlib visualizations plotting time-series data and 
+                        geographic camera locations on a city map.
                     </p>
                     <div class="project-tech">
-                        <span>C++</span>
-                        <span>Data Structures</span>
-                        <span>Algorithms</span>
-                        <span>Qt Framework</span>
+                        <span>Python</span>
+                        <span>SQLite</span>
+                        <span>SQL</span>
+                        <span>Matplotlib</span>
                     </div>
                     <div class="project-links">
-                        <a href="github" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <a href="https://github.com/KhangN65719/Chicago-Traffic-Camera-Data-Analysis" target="_blank" rel="noopener noreferrer" class="project-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                             </svg>
                             <span>GitHub</span>
-                        </a>
-                        <a href="#" class="project-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="2" y1="12" x2="22" y2="12"></line>
-                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                            </svg>
-                            <span>Live Demo</span>
                         </a>
                     </div>
                 </div>
@@ -403,6 +293,5 @@
     <script src="js/particles-config.js"></script>
     <script src="js/section-particles.js"></script>
     <script src="js/navigation.js"></script>
-    <script src="js/experience-tab.js"></script>
 </body>
 </html>

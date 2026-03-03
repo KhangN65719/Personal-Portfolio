@@ -1,48 +1,49 @@
 # 🌐 KhangNguyen.com - Personal Portfolio
 
-Welcome to my personal portfolio website! This site serves as a showcase of my skills, experience, and projects as I continue my journey in Computer Science. Here, you'll find insights into my background, the technologies I use, and ways to connect with me.
+Welcome to my personal portfolio website! This site showcases my skills, projects, and experience as I continue my journey in Computer Science — from my foundations at Nashville State Community College to studying at the University of Illinois Chicago.
 
 ---
 
 ## 📌 Table of Contents
+
 - [About Me](#about-me)
-- [Technologies](#technologies)
 - [Projects](#projects)
 - [Contact](#contact)
-- [Resume](#resume)
 
 ---
 
 ## 👨‍💻 About Me
 
-I'm a second-year Computer Science student at the University of Illinois Chicago with a strong interest in backend development and problem-solving. Outside of coding, I enjoy exercising, reading, and cooking—activities that help me maintain balance and spark creativity in my work.
+I'm a Computer Science student at the University of Illinois Chicago (UIC), a top public research university with a rigorous CS program covering everything from systems and algorithms to software design and programming language theory. Graduating May 2027.
+
+My CS journey started at Nashville State Community College, where I spent a year building a strong foundation in C++ — learning syntax, control structures, and core data structures like arrays and vectors — before transferring to UIC to go deeper.
+
+I have a strong interest in backend development and problem-solving, and I enjoy building projects that are clean, well-structured, and purposeful. Outside of coding, I enjoy exercising, reading, and cooking — activities that help me stay balanced and think creatively.
 
 ---
 
 ## 🛠️ Technologies
 
-Here are some of the technologies and tools I'm familiar with:
+Here are the technologies and tools I work with:
 
-- **Programming Languages**: C++, C, Python  
-- **Version Control**: Git  
-- **Web Development**: HTML, CSS *(used in this portfolio)*  
-- **Backend Development**: Strong interest in server-side logic and infrastructure
+- **Languages**: C++, C, Python, Go
+- **Backend**: REST APIs, Gin, GORM, SQLite
+- **Web**: HTML, CSS, JavaScript
+- **Data & Analysis**: SQL, Matplotlib
+- **Tools & Version Control**: Git, GitHub
 
 ---
 
 ## 🚀 Projects
 
-### 1. **Personal Portfolio Website** _(this site)_
-This website acts as my digital resume and hub for all my work and interests.
+### 1. **Full-Stack URL Shortener** — *Go, Gin, GORM, SQLite, HTML, CSS, JavaScript*
+A full-stack web application for shortening and redirecting URLs, built with a RESTful Go backend using Gin and persistent SQLite storage via GORM. Features a clean server-rendered frontend with form handling, input validation, and seamless redirects. Designed with a modular project structure separating handlers, services, and routes for maintainability and scalability.
 
-**Key Features:**
-- A personal introduction and downloadable resume
-- "About Me" section with background and skills
-- "Projects" section (more coming soon!)
-- "Contact" section with relevant links
+### 2. **Campus Pathfinding System** — *C++, Graphs, Dijkstra's Algorithm, JSON*
+A navigation tool that computes the shortest walking route between campus buildings using Dijkstra's algorithm. Parses JSON map data to construct a weighted adjacency-list graph and handles real-world constraints like blocked paths and ignored vertices. Built with reusable, well-structured graph classes focused on clean separation of concerns and performance.
 
-### 2. **Future Projects**
-Stay tuned! I’ll be adding more projects related to backend development, coursework, and personal experiments as I continue to learn and grow.
+### 3. **Chicago Traffic Camera Data Analysis** — *Python, SQLite, SQL, Matplotlib*
+An interactive, menu-driven application for exploring and analyzing thousands of Chicago traffic camera violation records stored in SQLite. Features complex SQL queries for trends by camera, intersection, and date, alongside Matplotlib visualizations plotting time-series data and geographic camera locations on a city map.
 
 ---
 
@@ -50,9 +51,9 @@ Stay tuned! I’ll be adding more projects related to backend development, cours
 
 Feel free to connect with me:
 
-- 📧 **Email**: [winnguyen0919@gmail.com](mailto:winnguyen0919@gmail.com)  
-- 💼 **LinkedIn**: [linkedin.com/in/khang-nguyen-b044ba279](https://www.linkedin.com/in/khang-nguyen-b044ba279)  
-- 💻 **GitHub**: [github.com/KhangN65719](https://github.com/KhangN65719)  
+- 📧 **Email**: [KhangN44345@gmail.com](mailto:KhangN44345@gmail.com)
+- 💼 **LinkedIn**: [linkedin.com/in/khang-nguyen-b044ba279](https://www.linkedin.com/in/khang-nguyen-b044ba279)
+- 💻 **GitHub**: [github.com/KhangN65719](https://github.com/KhangN65719)
 
 ---
 
@@ -62,4 +63,4 @@ You can view or download my resume [here](pdf/resume.pdf).
 
 ---
 
-Thanks for visiting my portfolio! 👋
+Thanks for visiting! 👋

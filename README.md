@@ -27,7 +27,7 @@ I have a strong interest in backend development and problem-solving, and I enjoy
 Here are the technologies and tools I work with:
 
 - **Languages**: C++, C, Python, Go
-- **Backend**: REST APIs, Gin, GORM, SQLite
+- **Backend**: HTTP APIs, GORM, SQLite
 - **Web**: HTML, CSS, JavaScript
 - **Data & Analysis**: SQL, Matplotlib
 - **Tools & Version Control**: Git, GitHub
@@ -36,8 +36,8 @@ Here are the technologies and tools I work with:
 
 ## 🚀 Projects
 
-### 1. **Full-Stack URL Shortener** — *Go, Gin, GORM, SQLite, HTML, CSS, JavaScript*
-A full-stack web application for shortening and redirecting URLs, built with a RESTful Go backend using Gin and persistent SQLite storage via GORM. Features a clean server-rendered frontend with form handling, input validation, and seamless redirects. Designed with a modular project structure separating handlers, services, and routes for maintainability and scalability.
+### 1. **URL Shortener** — *Go, net/http, GORM, SQLite*
+A backend service for shortening and redirecting URLs. It accepts URL submissions, stores mappings in SQLite, and separates HTTP handlers from storage. This project is in progress.
 
 ### 2. **Campus Pathfinding System** — *C++, Graphs, Dijkstra's Algorithm, JSON*
 A navigation tool that computes the shortest walking route between campus buildings using Dijkstra's algorithm. Parses JSON map data to construct a weighted adjacency-list graph and handles real-world constraints like blocked paths and ignored vertices. Built with reusable, well-structured graph classes focused on clean separation of concerns and performance.
